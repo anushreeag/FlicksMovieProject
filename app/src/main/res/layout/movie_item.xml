@@ -15,7 +15,7 @@
         android:layout_alignParentTop="true"
         tools:src="@mipmap/ic_launcher"
         android:adjustViewBounds="true"
-        android:scaleType="fitXY"/>
+        android:scaleType="fitXY" />
 
     <TextView
         android:id="@+id/title"
@@ -25,7 +25,7 @@
         android:layout_alignParentTop="true"
         android:layout_toRightOf="@+id/image"
         android:layout_toEndOf="@+id/image"
-        android:textSize="20sp"
+        android:textSize="30sp"
         android:textColor="@color/colorBlack"/>
 
     <TextView
@@ -35,7 +35,7 @@
         android:layout_below="@+id/title"
         android:layout_toRightOf="@+id/image"
         android:textColor="@color/colorBlack"
-        android:textSize="10sp"
+        android:textSize="12sp"
         tools:text="Following the events of Captain America: Civil War, Peter Parker, with the help of his mentor Tony Stark, tries to balance his life as an ordinary high school student in Queens, New York City, with fighting crime as his superhero alter ego Spider-Man as a new threat, the Vulture, emerges."
         />
 

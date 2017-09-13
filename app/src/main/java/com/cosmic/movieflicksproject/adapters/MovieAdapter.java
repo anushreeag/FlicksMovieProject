@@ -68,12 +68,12 @@ public class MovieAdapter extends ArrayAdapter<MovieBean> {
 
         if(isLandscape){
             //Landscape mode display backdrop image
-            Picasso.with(ctx).load(movie.getbackdrop_path()).into(holder.image);
+            Picasso.with(ctx).load(movie.getbackdrop_path()).placeholder(R.drawable.place_holder).error(R.drawable.place_holder_error).fit().into(holder.image);
         }
 
         else {
             //Portrait mode display poster image
-            Picasso.with(ctx).load(movie.getPoster_path()).into(holder.image);
+            Picasso.with(ctx).load(movie.getPoster_path()).placeholder(R.drawable.place_holder).error(R.drawable.place_holder_error).fit().into(holder.image);
         }
         return convertView;
 

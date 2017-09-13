@@ -30,7 +30,7 @@ public class MovieBean {
     }
 
     public String getPoster_path() {
-        return String.format("http://image.tmdb.org/t/p/w342/%s",poster_path);
+        return String.format("http://image.tmdb.org/t/p/w500/%s",poster_path);
     }
 
     public String getbackdrop_path() {
