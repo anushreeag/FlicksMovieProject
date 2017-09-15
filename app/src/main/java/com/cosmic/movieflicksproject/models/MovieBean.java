@@ -4,20 +4,26 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.Serializable;
 import java.util.ArrayList;
+
 
 /**
  * Created by anushree on 9/12/2017.
  * This is the Movie model class
  */
 
-public class MovieBean {
+public class MovieBean implements Serializable {
 
+    int id;
     String poster_path;
     String overview;
     String original_title;
     String backdrop_path;
     int vote_average;
+    String releaseDate;
+    Double popularity;
+
 
     public VoteTypeValues getVoteType() {
         return voteType;
@@ -35,6 +41,20 @@ public class MovieBean {
             LOW,HIGH;
     }
 
+    public int getId() {
+        return id;
+    }
+
+
+
+    public String getReleaseDate() {
+        return releaseDate;
+    }
+
+    public Double getPopularity() {
+        return popularity;
+    }
+
     public static VoteTypeValues getVoteTypeValues(int vote_average){
         if(vote_average>=5)
             return VoteTypeValues.HIGH;
@@ -49,7 +69,10 @@ public class MovieBean {
         this.overview = obj.getString("overview");
         this.backdrop_path = obj.getString("backdrop_path");
         this.vote_average = obj.getInt("vote_average");
-        voteType = getVoteTypeValues(vote_average);
+        this.voteType = getVoteTypeValues(vote_average);
+        this.releaseDate = obj.getString("release_date");
+        this.popularity = obj.getDouble("popularity");
+        this.id = obj.getInt("id");
 
     }
 
@@ -86,7 +109,6 @@ public class MovieBean {
 
         return movieList;
     }
-
     @Override
     public String toString() {
         return "original_title='" + original_title ;

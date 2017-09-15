@@ -13,10 +13,13 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.cosmic.movieflicksproject.R;
+import com.cosmic.movieflicksproject.activity.FlickMovieActivity;
 import com.cosmic.movieflicksproject.models.MovieBean;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
+
+import jp.wasabeef.picasso.transformations.RoundedCornersTransformation;
 
 /**
  * Created by anushree on 9/12/2017.
@@ -32,6 +35,7 @@ class ViewHolder1{ //LOW // Less Rating
 
 class ViewHolder2{ //HIGH //HIGH Rating
     ImageView image;
+    ImageView play;
 }
 
 public class MovieAdapter extends ArrayAdapter<MovieBean> {
@@ -84,11 +88,11 @@ public class MovieAdapter extends ArrayAdapter<MovieBean> {
                 holder1.overview.setText(movie.getOverview());
                 if (isLandscape) {
                     //Landscape mode display backdrop image
-                    Picasso.with(ctx).load(movie.getbackdrop_path()).placeholder(R.drawable.place_holder).error(R.drawable.place_holder_error)
+                    Picasso.with(ctx).load(movie.getbackdrop_path()).transform(new RoundedCornersTransformation(20,20)).placeholder(R.drawable.place_holder).error(R.drawable.place_holder_error)
                             .fit().into(holder1.image);
                 } else {
                     //Portrait mode display poster image
-                    Picasso.with(ctx).load(movie.getPoster_path()).placeholder(R.drawable.place_holder).error(R.drawable.place_holder_error)
+                    Picasso.with(ctx).load(movie.getPoster_path()).transform(new RoundedCornersTransformation(20,20)).placeholder(R.drawable.place_holder).error(R.drawable.place_holder_error)
                             .fit().into(holder1.image);
                 }
                 return convertView;
@@ -100,11 +104,13 @@ public class MovieAdapter extends ArrayAdapter<MovieBean> {
                     holder2 = new ViewHolder2();
                     convertView = getLayoutfromType(type, parent);
                     holder2.image = (ImageView) convertView.findViewById(R.id.imageBackdrop);
+                    holder2.play = (ImageView) convertView.findViewById(R.id.play);
                     convertView.setTag(holder2);
                 } else {
                     holder2 = (ViewHolder2) convertView.getTag();
                 }
-                Picasso.with(ctx).load(movie.getbackdrop_path()).placeholder(R.drawable.place_holder_highvote).fit().into(holder2.image);
+                Picasso.with(ctx).load(movie.getbackdrop_path()).transform(new RoundedCornersTransformation(20,20)).placeholder(R.drawable.place_holder_highvote).fit().into(holder2.image);
+
                 return convertView;
 
             default:
