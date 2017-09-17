@@ -2,7 +2,7 @@
 
 *Flicks** shows the latest movies currently playing in theaters. The app utilizes the Movie Database API to display images and basic information about these movies to the user.
 
-Time spent: **20** hours spent in total
+Time spent: **24** hours spent in total
 
 ## User Stories
 
@@ -35,18 +35,23 @@ The following **additional** features are implemented:
 * [ ] List anything else that you can get done to improve the app functionality!
 * [x] Play icon is shown only if the valid video URL is available. Else only the poster is displayed
 * [x] If the VideoURL is not available then OnClick will not make any action for popular movies.
+* [x] Option to switch between List or Grid View for the list of Movies
+* [x] Saved the preferences of user using Shared Preferences for List/Grid View for the list of movies
+* [x] Refresh button for refreshing the list of movies.
+* [x] Showing the Refresh progress using Progress dialog.
+* [x] In Grid View, clicking on any movie will play trailer of the movie.
+* [x] Tagged the popular movie in Grid View by displaying "Star" on top right of movie icon 
 
 ## Video Walkthrough
 
 Here's a walkthrough of implemented user stories
 
-<img src='http://i.imgur.com/pXsehbQ.gif' title='Portrait Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='http://i.imgur.com/RyS0pQF.gif' title='Portrait Video Walkthrough' width='' alt='Video Walkthrough' />
 
-<img src='http://i.imgur.com/OyWAqkq.gif' title='Landscape Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='http://i.imgur.com/nBzT7r6.gif' title='Landscape Video Walkthrough' width='' alt='Video Walkthrough' />
 
-
-Portrait Video Walkthrough (https://i.imgur.com/pXsehbQ.gif)
-Landscape Video Walkthrough (https://i.imgur.com/OyWAqkq.gif)
+Portrait Video Walkthrough (https://i.imgur.com/RyS0pQF.gif)
+Landscape Video Walkthrough (https://i.imgur.com/nBzT7r6.gif)
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
