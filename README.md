@@ -33,8 +33,8 @@ The following **bonus** features are implemented:
 The following **additional** features are implemented:
 
 * [ ] List anything else that you can get done to improve the app functionality!
-	[x] Play icon is shown only if the valid video URL is available. Else only the poster is displayed
-	[x] If the VideoURL is not available then OnClick will not make any action for popular movies.
+* [x] Play icon is shown only if the valid video URL is available. Else only the poster is displayed
+* [x] If the VideoURL is not available then OnClick will not make any action for popular movies.
 
 ## Video Walkthrough
 
