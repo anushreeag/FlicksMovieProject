@@ -36,7 +36,7 @@ The following **additional** features are implemented:
 * [x] Play icon is shown only if the valid video URL is available. Else only the poster is displayed
 * [x] If the VideoURL is not available then OnClick will not make any action for popular movies.
 * [x] Option to switch between List or Grid View for the list of Movies
-* [x] Saved the preferences of user using Shared Preferences for List/Grid View for the list of movies
+* [x] By default application opens in List mode for the first time. Later on, user preference is saved for list/Grid view using SharedPreferences.
 * [x] Refresh button for refreshing the list of movies.
 * [x] Showing the Refresh progress using Progress dialog.
 * [x] In Grid View, clicking on any movie will play trailer of the movie.
