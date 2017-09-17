@@ -58,6 +58,8 @@ GIF created with [LiceCap](http://www.cockos.com/licecap/).
 ## Notes
 
 Describe any challenges encountered while building the app.
+Implementing the youtube support fragment to show youtube preview in the dialog fragment.
+Learnt about adding a fragment within a fragment using FrameLayout
 
 ## Open-source libraries used
 
