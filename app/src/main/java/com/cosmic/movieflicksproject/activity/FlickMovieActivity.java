@@ -24,6 +24,8 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
 import okhttp3.Call;
 import okhttp3.Callback;
 import okhttp3.HttpUrl;
@@ -33,7 +35,7 @@ import okhttp3.Response;
 
 public class FlickMovieActivity extends AppCompatActivity {
 
-    ListView lv;
+    @BindView(R.id.list) ListView lv;
     public static final String TAG = "FlickMovieActivity";
     public static final String MOVIESURL = "https://api.themoviedb.org/3/movie/now_playing?api_key=a07e22bc18f5cb106bfe4cc1f83ad8ed";
     public static final String VIDEOSURL = "https://api.themoviedb.org/3/movie/%s/videos?api_key=a07e22bc18f5cb106bfe4cc1f83ad8ed";
@@ -51,9 +53,8 @@ public class FlickMovieActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_flick_movie);
-
+        ButterKnife.bind(this);
         movieBundle = new Bundle();
-        lv = (ListView) findViewById(R.id.list);
         fm = getSupportFragmentManager();
         movieList = new ArrayList<>();
         myadp = new MovieAdapter(FlickMovieActivity.this,movieList);

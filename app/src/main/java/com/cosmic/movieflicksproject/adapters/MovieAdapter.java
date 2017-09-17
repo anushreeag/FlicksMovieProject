@@ -19,6 +19,8 @@ import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
 import jp.wasabeef.picasso.transformations.RoundedCornersTransformation;
 
 /**
@@ -28,14 +30,21 @@ import jp.wasabeef.picasso.transformations.RoundedCornersTransformation;
 
 //Helps to increase the perfomance - so we can avoid calls to findViewById
 class ViewHolder1{ //LOW // Less Rating
-        ImageView image;
-        TextView title;
-        TextView overview;
+    @BindView(R.id.image)ImageView image;
+    @BindView(R.id.title) TextView title;
+    @BindView(R.id.overview) TextView overview;
+
+    ViewHolder1(View view){
+        ButterKnife.bind(this,view);
+    }
 }
 
 class ViewHolder2{ //HIGH //HIGH Rating
-    ImageView image;
-    ImageView play;
+    @BindView(R.id.imageBackdrop) ImageView image;
+    @BindView(R.id.play)ImageView play;
+    ViewHolder2(View view){
+        ButterKnife.bind(this,view);
+    }
 }
 
 public class MovieAdapter extends ArrayAdapter<MovieBean> {
@@ -75,11 +84,8 @@ public class MovieAdapter extends ArrayAdapter<MovieBean> {
             case 0: // LOW
                 ViewHolder1 holder1;
                 if (convertView == null) {
-                    holder1 = new ViewHolder1();
                     convertView = getLayoutfromType(type, parent);
-                    holder1.image = (ImageView) convertView.findViewById(R.id.image);
-                    holder1.title = (TextView) convertView.findViewById(R.id.title);
-                    holder1.overview = (TextView) convertView.findViewById(R.id.overview);
+                    holder1 = new ViewHolder1(convertView);
                     convertView.setTag(holder1);
                 } else {
                     holder1 = (ViewHolder1) convertView.getTag();
@@ -101,10 +107,8 @@ public class MovieAdapter extends ArrayAdapter<MovieBean> {
                 ViewHolder2 holder2;
 
                 if (convertView == null) {
-                    holder2 = new ViewHolder2();
                     convertView = getLayoutfromType(type, parent);
-                    holder2.image = (ImageView) convertView.findViewById(R.id.imageBackdrop);
-                    holder2.play = (ImageView) convertView.findViewById(R.id.play);
+                    holder2 = new ViewHolder2(convertView);
                     convertView.setTag(holder2);
                 } else {
                     holder2 = (ViewHolder2) convertView.getTag();

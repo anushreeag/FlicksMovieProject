@@ -22,7 +22,6 @@ public class MovieBean implements Serializable {
     String backdrop_path;
     int vote_average;
     String releaseDate;
-    Double popularity;
 
 
     public VoteTypeValues getVoteType() {
@@ -51,9 +50,6 @@ public class MovieBean implements Serializable {
         return releaseDate;
     }
 
-    public Double getPopularity() {
-        return popularity;
-    }
 
     public static VoteTypeValues getVoteTypeValues(int vote_average){
         if(vote_average>=5)
@@ -71,7 +67,6 @@ public class MovieBean implements Serializable {
         this.vote_average = obj.getInt("vote_average");
         this.voteType = getVoteTypeValues(vote_average);
         this.releaseDate = obj.getString("release_date");
-        this.popularity = obj.getDouble("popularity");
         this.id = obj.getInt("id");
 
     }

@@ -1,7 +1,7 @@
 <resources>
     <dimen name="fab_margin">16dp</dimen>
     <dimen name="dialog_title">15sp</dimen>
-    <dimen name="dialog_text">10sp</dimen>
+    <dimen name="dialog_text">12sp</dimen>
     <dimen name="lowVote_title">30sp</dimen>
     <dimen name="lowVote_text">12sp</dimen>
 </resources>
